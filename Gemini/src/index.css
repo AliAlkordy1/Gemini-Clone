@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: Outfit;
+}
+:root{
+display: flex;
+min-height: 100vh;
+
+}
+
+
+/* SideBar */
+.sidebar-container{
+  background-color: #f0f4f9;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 15px;
+  min-height: 100vh;
+  
+}
+
+
+.icons{
+  cursor: pointer;
+  display: flex;
+  
+
+}
+
+.newChat{
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  gap: 10px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #e6eaf1;
+  font-size: 14px;
+  color: gray;
+
+}
+.newChat:hover{
+  background-color: #e2e6eb;
+
+
+}
+
+.recent{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+}
+
+
+
+.bottom-sidebar{
+display: flex;
+
+  flex-direction: column;
+
+
+}
+.bottom-icons{
+  display: flex;
+   margin-bottom: 10px;
+   
+
+
+}
+
+.if-collapsed{
+  display: flex;
+  justify-content: center;
+   margin-bottom: 10px;
+}
+.bottom-icons icon{
+
+  cursor: pointer;
+
+}
+.bottom-icons p{
+  margin-left: 5px;
+cursor: pointer;
+
+}
