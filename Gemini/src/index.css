@@ -6,13 +6,11 @@ padding: 0%;
 box-sizing: border-box;
 font-family: Outfit;
 }
-:root{
-display: flex;
-min-height: 100vh;
-
+#root {
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
 }
-
-
 /* SideBar */
 .sidebar-container{
   background-color: #f0f4f9;
@@ -92,5 +90,154 @@ display: flex;
 .bottom-icons p{
   margin-left: 5px;
 cursor: pointer;
+
+}
+
+
+/* main.jsx styles  */
+
+.main-container{
+/* 
+
+
+position: relative;
+ */flex: 1;
+ min-width: 100vh;
+ min-height: 100vh;
+ padding-bottom: 15vh;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  padding: 20px;
+  color: #585858;
+  
+  
+
+}
+
+.nav img{
+
+  width: 50px;  
+  height: 50px  ;  
+  object-fit: cover; 
+  border-radius: 50%; 
+
+}
+
+.hello-container{
+  max-width: 900px;
+  margin: auto;
+
+}
+
+.greet{
+  margin: 50px 0px;
+  font-size: 56px;
+  color: #c4c7c5;
+  font-weight: 500;
+  padding: 20px;
+
+
+}
+
+.greet p span {
+  background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 1px gray;
+
+
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  background-color: #f0f4f9;
+  border-radius: 10px ;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.greet-icon{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+
+}
+
+.card p{
+  font-size: 17px;
+  color: #585858;
+
+
+}
+
+.card:hover{
+  background-color: #dfe4ea;
+
+}
+
+.main-botton{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  margin: auto;
+
+}
+
+.search-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #f0f4f9;
+  padding: 10px 20px;
+  border-radius: 50px;
+
+
+
+
+}
+
+.search-box input{
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+
+}
+
+.search-box div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.bottom-info{
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+
 
 }

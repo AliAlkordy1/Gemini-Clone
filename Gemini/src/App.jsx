@@ -1,5 +1,6 @@
 
 import SideBar from './components/sideBar';
+import Main from './components/Main';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
     <SideBar/>
+    <Main/>
     </>
   )
 }
