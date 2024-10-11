@@ -1,12 +1,23 @@
 import { Icon } from '@iconify/react';
-
+import { useContext } from "react";
+import { Context } from './../context/context';
 export default function Main() {
+
+    const {onSent, recentPrompt, showResult, loading, resultData, setInput, input }=  useContext(Context);
+
+
+
     return <>
     <div className="main-container">
         <div className="nav">
             <h4>Gemini</h4>
             <img src="../src/Assets/bearded-man-with-striped-shirt_273609-7180.avif" alt="profile" />
         </div>
+
+
+        {!showResult ? 
+        
+        
         <div className="hello-container">
             <div className="greet">
                  <p><span>HELLO, DEV.</span></p>
@@ -33,15 +44,39 @@ export default function Main() {
            
 
 
-        </div> 
+        </div> </div>
         
+        : 
+        
+        
+        <div className="result" >
+            <div className="result-title">
+            <img src="../src/Assets/bearded-man-with-striped-shirt_273609-7180.avif" alt="profile" />
+                <p>{recentPrompt}</p>
+
+            </div>
+            <div className="result-data" >
+            <Icon icon="logos:google-gemini" width="94" height="94" className="result-icon"/>
+            {loading? <div className="loader" > <hr /><hr /><hr /> </div> : <p dangerouslySetInnerHTML={{ __html: resultData }}></p>}
+                
+            </div>
+
+        </div> }
+
+
+
+
+
+
+       
+        <div className="temp-input">
         <div className="main-botton">
                 <div className="search-box">
-                    <input type="text" placeholder="Enter a prompt here"/>
+                    <input onChange={(e)=>setInput(e.target.value )} value ={input} type="text" placeholder="Enter a prompt here"     />
                     <div>
                     <Icon icon="icon-park-outline:add-picture" width="24" height="24"  style={{color: "black" , cursor: "pointer"   } } />
                     <Icon icon="material-symbols:mic-outline" width="24" height="24"  style={{color: "black", cursor: "pointer" }} />
-                    <Icon icon="mage:direction-right-2" width="24" height="24"  style={{color: "black", cursor: "pointer" }} />
+                    <Icon icon="mage:direction-right-2" width="24" height="24"  style={{color: "black", cursor: "pointer" }} onClick={()=> onSent()  } />
                     </div>
 
 
@@ -54,9 +89,8 @@ export default function Main() {
 
 
         </div>
-       
-
-    </div>
+</div>
+    
     
     </>
     
