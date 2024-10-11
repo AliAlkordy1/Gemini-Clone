@@ -11,7 +11,7 @@ export default function Main() {
     <div className="main-container">
         <div className="nav">
             <h4>Gemini</h4>
-            <img src="../src/Assets/bearded-man-with-striped-shirt_273609-7180.avif" alt="profile" />
+            <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg" alt="profile" />
         </div>
 
 
@@ -51,7 +51,7 @@ export default function Main() {
         
         <div className="result" >
             <div className="result-title">
-            <img src="../src/Assets/bearded-man-with-striped-shirt_273609-7180.avif" alt="profile" />
+            <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg" alt="profile" />
                 <p>{recentPrompt}</p>
 
             </div>

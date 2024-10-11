@@ -5,11 +5,11 @@ margin: 0%;
 padding: 0%;
 box-sizing: border-box;
 font-family: Outfit;
-animation: fadeIn 1.5s;
+
 }
 body{
   height: 100vh;
-
+animation: fadeIn 1.5s;
 }
 #root {
   display: flex;
